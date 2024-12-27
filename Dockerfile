@@ -5,4 +5,5 @@ FROM golang:1.22-alpine
 ENV GOPROXY=https://goproxy.cn,direct
 
 # install protoc
-RUN apk update && apk add --no-cache protoc && protoc --version
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories \
+    && apk update && apk add --no-cache protoc && protoc --version
