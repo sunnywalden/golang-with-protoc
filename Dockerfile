@@ -1,9 +1,6 @@
 # Use the official Golang image as the base image
 FROM golang:1.22-alpine
 
-# Set the working directory inside the container
-WORKDIR /app
-
 # Set the GOPROXY environment variable
 ENV GOPROXY=https://goproxy.cn,direct
 
