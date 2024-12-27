@@ -1,5 +1,5 @@
 # Use the official Golang image as the base image
-FROM golang:1.22-alpine
+FROM golang:1.23-alpine
 
 # Set the GOPROXY environment variable
 ENV GOPROXY=https://goproxy.cn,direct
